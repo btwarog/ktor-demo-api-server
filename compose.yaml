@@ -8,5 +8,3 @@ services:
     image: test-ktor-api  # Specifies the tag for the Docker image
     ports:
       - "8080:8080"
-    env_file:
-      - .env
