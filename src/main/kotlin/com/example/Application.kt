@@ -44,10 +44,18 @@ fun Application.module() {
     dotenv {
       ignoreIfMissing = true
     }
-//
-//  System.setProperty("DATABASE_URL", dotenv["DATABASE_URL"] ?: "")
-//  System.setProperty("DATABASE_USER", dotenv["DATABASE_USER"] ?: "")
-//  System.setProperty("DATABASE_PASSWORD", dotenv["DATABASE_PASSWORD"] ?: "")
+
+  if(System.getenv("DATABASE_URL") == null) {
+    System.setProperty("DATABASE_URL", dotenv["DATABASE_URL"] ?: "")
+  }
+
+  if(System.getenv("DATABASE_USER") == null) {
+    System.setProperty("DATABASE_USER", dotenv["DATABASE_USER"] ?: "")
+  }
+
+  if(System.getenv("DATABASE_PASSWORD") == null) {
+    System.setProperty("DATABASE_PASSWORD", dotenv["DATABASE_PASSWORD"] ?: "")
+  }
 
   DatabaseConfig.init()
 
