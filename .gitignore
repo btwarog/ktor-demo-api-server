@@ -279,4 +279,5 @@ uploads/*
 # Ignore .env file
 .env
 
-# Ignore ds
+# Ignore DS_Store
+.DS_Store
