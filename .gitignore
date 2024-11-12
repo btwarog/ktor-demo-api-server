@@ -278,3 +278,5 @@ uploads/*
 
 # Ignore .env file
 .env
+
+# Ignore ds
