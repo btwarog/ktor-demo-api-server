@@ -8,3 +8,11 @@ services:
     image: test-ktor-api  # Specifies the tag for the Docker image
     ports:
       - "8080:8080"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_ISSUER=${JWT_ISSUER}
+      - JWT_AUDIENCE=${JWT_AUDIENCE}
+      - UPLOAD_DIR=${UPLOAD_DIR}
